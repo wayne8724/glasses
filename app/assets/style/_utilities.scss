@@ -1,8 +1,15 @@
 .container {
-    max-width: 1296px;
+    max-width: 1320px;
     margin: 0 auto;
     padding: 0px 12px;
+    @include pad{
+        max-width: 992px;
+    }
+    @include mobile{
+        max-width: 768px;
+    }
 }
+
 /*df*/
 .d-flex{
     display: flex;
@@ -23,6 +30,15 @@
 .gap-1{
     gap: 64px;
 }
+
+.gap-2{
+    gap: 48px;
+}
+
+.gap-3{
+    gap: 32px;
+}
+
 /*fz*/
 
 .font-size-1{
@@ -37,9 +53,8 @@
     font-size: 20px;
 }
 
-/*lh*/
-.line-height-1{
-    line-height: 30px;
+.font-size-4{
+    font-size: 36px;
 }
 
 /*fw*/
@@ -65,3 +80,7 @@
 }
 
 /*distance*/
+
+.mt-1{
+    margin-top: 24px;   
+}

@@ -15,3 +15,9 @@
         @content;
     }
 }
+
+@mixin navHover{
+    color: $secondary;
+    transform: scale(130%);
+    transition: 0.8s;
+}
