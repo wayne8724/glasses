@@ -1,6 +1,9 @@
 
 .nav-all{
     padding: 15.5px 0;
+    @include mobile{
+        padding: 0;
+    }
     &-logo {
         display: block;
         background: url(../images/logo-white.png) no-repeat center;
@@ -8,12 +11,45 @@
         width: 80px;
         height: 49px;
         @include hideText;
+        @include mobile{
+            display: block;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
     }
-    li a{
-        display: inline-block;
-    }
-    li a:hover{
-        @include navHover;
+    .container{
+        @include mobile{
+            flex-direction: column;
+            padding: 0;
+        }
+        ul{
+            flex-wrap: wrap;
+            @include mobile{
+                width: 100%;
+                text-align: center;
+            }
+            li{
+                padding: 0px 32px;
+                @include mobile{
+                    width: 50%;
+                    outline: 1px solid $white;
+                    padding: 0;
+                }
+                &:hover{
+                    @include navHover_web;
+                    @include mobile{
+                        @include navHover_mobile;
+                    }
+                }
+                a{
+                    @include mobile{
+                        display: inline-block;
+                        width: 100%;
+                        padding: 9px 62px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -21,6 +57,10 @@
     padding-top: 48px;
     padding-bottom: 32px;
     border-bottom: 1px solid $white;
+    @include mobile{
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
     img{
         width: 48px;
         height: 48px;
@@ -33,7 +73,7 @@
         padding: 12px 0px;
     }
     a:hover{
-        @include navHover;
+        @include navHover_web;
     }
     .connect li{
         display: flex;
@@ -42,24 +82,60 @@
         span{
             display: inline-block;
             font-size: 36px;
+            @include mobile{
+                font-size: 16px;    
+            }
         }
-        
+    }
+    .footerNav{
+        @include mobile{
+            display: none;
+        }
+    }
+    .connect{
+        @include mobile{
+            margin: 0;
+        }
     }
 }
 
 .rightContact{
     a{
-        display: inline-block;
+        display: block;
+        font-size: 0;
     }
     a:hover{
-        @include navHover;
+        @include navHover_web;
+    }
+    img{
+        @include mobile{
+            width: 24px;
+            height: 24px;
+        }
     }
 }
 
 .copyRight{
     padding: 32px 0px;
-    &-ch span{
+    @include mobile{
+        padding-top: 16px;
+        padding-bottom: 24px;
+        flex-direction: column;
+    }
+    p{
+        @include mobile{
+            margin-bottom: 8px;
+        }
+    }
+    &-ch {
         display: flex;
         align-items: center;
+        @include mobile{
+            flex-direction: column;
+            align-items: start;
+            gap: 8px;
+            line-height: 24px;
+        }
     }
+    
 }
