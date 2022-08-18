@@ -1,0 +1,237 @@
+.banner{
+    background-image: url(../images/home-header.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 787px;
+    @include pad{
+        background-image: url(../images/home-header-sm.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 787px;
+    }
+    @include mobile{
+        height: 396px;
+    }
+    .titleOne{
+        @include mobile{
+            font-size: 16px;
+        }
+    }
+    .titleTwo{
+        @include mobile{
+            font-size: 24px;
+        }
+    }
+}
+
+.titleTex{
+    height: 100%;
+}
+
+.titleBtn{
+    padding: 6px 12px;
+    background-color: $titleText-color;
+    a{
+        color: $white;
+        font-size: 20px;
+    }
+}
+
+.service{
+    background-color: $secondary;
+    padding: 80px 0px;
+    @include mobile{
+        padding: 40px 0px;
+    }
+    ul{
+        @include pad{
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+        @include mobile{
+            justify-content: center;
+            gap: 24px;
+        }
+        li{
+            width: 23.61%;
+            text-align: center;
+            @include pad{
+                width: 48%;
+            }
+            @include mobile{
+                width: 90%;
+            }
+            img{
+                width: 83.3px; 
+            }
+            p{
+                text-align: left;
+            }
+        }
+    }
+}
+
+.classical{
+    padding: 80px 0px;
+    @include mobile{
+        padding: 40px 0px;
+    }
+    .classicalTitle{
+        margin-bottom: 24px;
+    }
+    ul{
+        @include pad{
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+        }
+        li{
+            width: 32.09%;
+            @include pad{
+                width: 82%;
+            }
+            @include mobile{
+                width: 95%;
+            }
+        }
+    }
+}
+
+.brand{
+    background-image: url(../images/index-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    @include pad{
+        background-image: url(../images/index-bg-md.png);
+    }
+    @include mobile{
+        background-image: url(../images/index-bg-sm.png);
+    }
+    padding: 80px 0;
+    @include mobile{
+        padding: 40px 0;
+    }
+    ul{
+        @include pad{
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+        li{
+            width: 50%;
+            @include pad{
+                width: 90.625%;
+            }
+            @include mobile{
+                width: 92.8%;
+            }
+            .brandPic-1{
+                background-image: url(../images/home-section4-1.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 240px;
+                @include mobile{
+                    background-image: url(../images/home-section4-1-sm.png);
+                }
+            }
+            .brandPic-2{
+                background-image: url(../images/home-section4-2.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 240px;
+                @include mobile{
+                    background-image: url(../images/home-section4-2-sm.png);
+                }
+            }
+            .brandText{
+                padding: 8px 0;
+                background-color: $white;
+            }
+        }
+    }
+}
+
+.recommend{
+    padding: 80px 0;
+    @include mobile{
+        padding: 40px 0;
+    }
+    ul{
+        gap: 24px;
+        @include pad{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        li{
+            width: 23.61%;
+            @include pad{
+                width: 43.75%;
+            }
+            @include mobile{
+                width: 92.8%;
+            }
+            box-shadow: 0px 2px 6px #00000029;
+            .recommendText{
+                padding: 16px;
+            }
+            .date{
+                color: #707070;
+            }
+        }
+    }
+}
+
+.contactUs{
+    padding: 80px 0px;
+    @include mobile{
+        padding: 40px 0;
+    }
+    background-color: $secondary;
+    .container{
+        max-width: 660px;
+        padding: 0px 12px;
+        p{
+            @include pad{
+                font-size: 16px;
+            }
+        }
+        input{
+            width: 100%;
+            padding: 6px 0px 6px 12px;
+        }
+        textarea{
+            width: 100%;
+            padding: 6px 12px;
+        }
+        .agree{
+            input{
+                width: 16px;
+                height: 16px;
+            }
+            @include mobile{
+                margin-bottom: 24px;
+            }
+        }
+        button{
+            display: block;
+            margin: 0 auto;
+            padding: 16px 176px;
+            background-color: $primary;
+            color: $white;
+            border: 0px solid $secondary;
+            @include mobile{
+                padding: 16px 142px;
+            }
+        }
+    }
+}
+
+.contactInfoTitle, .recommendTitle, .brandTitle, .classicalTitle, .serviceTitle{
+    @include mobile{
+        font-size: 24px;
+    }
+}
