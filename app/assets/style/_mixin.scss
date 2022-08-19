@@ -27,3 +27,24 @@
     background-color: $white;
     transform: none;
 }
+
+@mixin product_navHover {
+    padding-bottom: 16px;
+    border-bottom: 8px solid $primary;
+}
+
+@mixin product_navHover_pad_mobile {
+    @content;
+}
+
+@mixin pageHover_1{
+    background-color: #000000;
+    color: #FFFFFF;
+    transition: 0.9s;
+}
+
+@mixin pageHover_2{
+    background-color: #F2F2F2;
+    color: #555555;
+    transition: 0.95s;
+}

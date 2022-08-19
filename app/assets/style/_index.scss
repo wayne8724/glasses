@@ -223,6 +223,7 @@
             background-color: $primary;
             color: $white;
             border: 0px solid $secondary;
+            cursor: pointer;
             @include mobile{
                 padding: 16px 142px;
             }
